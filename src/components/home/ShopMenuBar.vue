@@ -15,8 +15,8 @@ import {useSockShopStore} from "@/stores/sockShop";
 import {computed} from "vue";
 
 const menuItems = [
-  { text: "Frauen", category: Category.FEMALE }, { text: "Männer", category: Category.MALE },
-  { text: "Kinder", category: Category.CHILD }
+  { text: "Women", category: Category.FEMALE }, { text: "Men", category: Category.MALE },
+  { text: "Kids", category: Category.CHILD }
 ];
 
 const store = useSockShopStore();

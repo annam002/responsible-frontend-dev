@@ -1,7 +1,7 @@
 <template>
 <div class="footer">
-  <a class="small-gap" href="/impressum">Impressum</a>
-  <a href="/agb">AGB</a>
+  <a class="small-gap" href="/imprint">Imprint</a>
+  <a href="/terms">Terms & Conditions</a>
 </div>
 </template>
 

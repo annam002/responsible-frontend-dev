@@ -1,11 +1,11 @@
 <template>
 <div class="filter-box">
   <div class="filter-heading">Filter</div>
-  <div class="filter-category">Größe</div>
+  <div class="filter-category">Size</div>
   <div class="filter-selector"><size-selector></size-selector></div>
-  <div class="filter-category">Farbe</div>
+  <div class="filter-category">Colour</div>
   <div class="filter-selector"><color-selector></color-selector></div>
-  <div class="filter-category">Preis (maximal)</div>
+  <div class="filter-category">Price (maximum)</div>
   <div class="filter-selector"><price-selector></price-selector></div>
 </div>
 </template>

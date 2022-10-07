@@ -1,6 +1,6 @@
 <template>
 <div class="header">
-  <div class="heading clicky" @click="openHome">Der Sockenshop</div>
+  <div class="heading clicky" @click="openHome">The Sock-Shop</div>
   <div class="clicky" @click="openCart"><img src="./../assets/cart.png"/><span class="num-items">{{ numItems }}</span></div>
 </div>
 </template>

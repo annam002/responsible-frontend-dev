@@ -10,7 +10,7 @@
     </div>
   </div>
   <div :class="{ hidden: addedInfoHidden }" class="info-box">
-    <div>Erfolgreich in den Warenkorb gelegt!</div>
+    <div>The socks were added to the cart!</div>
     <br/>
     <div class="button" @click="hideInfo">OK</div>
   </div>
