@@ -7,8 +7,7 @@
   font-weight: normal;
 }
 
-a,
-.green {
+a {
   text-decoration: none;
   color: grey;
   transition: 0.4s;
@@ -84,6 +83,10 @@ a,
   padding: 0.5rem;
   text-align: center;
   cursor: pointer;
+  font-size: 0.938rem;
+  width: 150px;
+  height: 40px;
+  align-self: flex-end;
 }
 
 .hidden {
@@ -97,6 +100,8 @@ a,
   background-color: white;
   padding: 2rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 

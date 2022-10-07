@@ -6,23 +6,26 @@
       <div class="sock-name">{{ sock.name }}</div>
       <div>{{ sock.description }}</div>
       <div>{{ sock.price }}€</div>
-      <div class="button add-to-cart" @click="() => addToCart(sock)">Add to Cart</div>
+      <button class="button" @click="() => addToCart(sock)">Add to Cart</button>
     </div>
   </div>
-  <div :class="{ hidden: addedInfoHidden }" class="info-box">
+  <dialog ref="confirmDialog" class="info-box" :class="{ hidden: addedInfoHidden }">
     <div>The socks were added to the cart!</div>
     <br/>
-    <div class="button" @click="hideInfo">OK</div>
-  </div>
+    <button ref="okButton" class="button" @click="hideInfo" @keydown.esc.stop="hideInfo">OK</button>
+  </dialog>
 </div>
 </template>
 
 <script setup lang="ts">
 import {useSockShopStore} from "@/stores/sockShop";
-import {computed, ref} from "vue";
+import {computed, nextTick, ref} from "vue";
 import type {Sock} from "@/db/socks";
 
 const store = useSockShopStore();
+
+const confirmDialog = ref();
+const okButton = ref();
 
 const addedInfoHidden = ref(true);
 
@@ -30,12 +33,17 @@ const currentSockList = computed(() => {
   return store.currentSockList;
 });
 
-function addToCart(sock: Sock) {
+async function addToCart(sock: Sock) {
   store.addToCart(sock);
+  confirmDialog.value.showModal();
   addedInfoHidden.value = false;
+
+  await nextTick();
+  okButton.value.focus();
 }
 
 function hideInfo() {
+  confirmDialog.value.close();
   addedInfoHidden.value = true;
 }
 
@@ -68,8 +76,4 @@ function hideInfo() {
   font-size: 1rem;
 }
 
-.add-to-cart {
-  width: 150px;
-  align-self: flex-end;
-}
 </style>

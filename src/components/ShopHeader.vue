@@ -1,7 +1,7 @@
 <template>
 <div class="header">
-  <div class="heading clicky" @click="openHome">The Sock-Shop</div>
-  <div class="clicky" @click="openCart"><img src="./../assets/cart.png"/><span class="num-items">{{ numItems }}</span></div>
+  <h1 class="heading clicky" @click="openHome">The Sock-Shop</h1>
+  <button class="img-button" @click="openCart"><img src="./../assets/cart.png"/><span class="num-items">{{ numItems }}</span></button>
 </div>
 </template>
 
@@ -45,5 +45,10 @@ function openCart() {
 }
 .clicky {
   cursor: pointer;
+}
+
+.img-button {
+  background-color: darkblue;
+  border: none;
 }
 </style>

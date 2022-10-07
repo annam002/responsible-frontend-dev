@@ -1,7 +1,7 @@
 <template>
 <div class="main">
   <shop-menu-bar></shop-menu-bar>
-  <div class="content">
+  <div class="content" role="tabpanel">
     <sock-filter></sock-filter>
     <sock-list></sock-list>
   </div>

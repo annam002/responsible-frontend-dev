@@ -1,12 +1,12 @@
 <template>
 <div class="flex flex-wrap">
-  <div v-for="size in sizes" v-bind:key="size"
+  <button v-for="size in sizes" v-bind:key="size"
        class="filter-item"
        :class="{'selected-item': selectedSize === size}"
        @click="selectSize(size)"
   >
     {{ size }}
-    </div>
+    </button>
 </div>
 </template>
 
@@ -28,12 +28,17 @@ function selectSize(size: number) {
 <style scoped>
 .filter-item {
   width: 40px;
+  height: 42px;
   padding: 0.5rem;
   margin: 1px;
   border: 1px solid grey;
   text-align: center;
   cursor: pointer;
+  color: grey;
+  background-color: white;
+  font-size: 0.938rem;
 }
+
 .selected-item {
   background-color: grey;
   color: white;

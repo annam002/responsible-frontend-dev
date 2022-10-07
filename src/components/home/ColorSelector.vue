@@ -1,12 +1,12 @@
 <template>
   <div class="flex flex-wrap">
-    <div v-for="color in colors" v-bind:key="color"
+    <button v-for="color in colors" v-bind:key="color"
          class="filter-item"
          :class="{'selected-item': selectedColor === color.color}"
          @click="selectColor(color.color)"
     >
       <img :src="getColorImage(color)"/>
-    </div>
+    </button>
   </div>
 </template>
 
@@ -42,6 +42,7 @@ function getColorImage({img, color} : { img: string, color: Color }) {
   border: 1px solid grey;
   text-align: center;
   cursor: pointer;
+  padding: 0;
 }
 
 </style>
