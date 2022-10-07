@@ -34,13 +34,19 @@ function selectSize(size: number) {
   border: 1px solid grey;
   text-align: center;
   cursor: pointer;
-  color: grey;
+  color: #595959;
   background-color: white;
   font-size: 0.938rem;
 }
 
 .selected-item {
-  background-color: grey;
+  background-color: #595959;;
   color: white;
+}
+
+.selected-item:hover, .selected-item:focus {
+  background-color: #017e7e;
+  color: white;
+  border: 1px solid #017e7e;
 }
 </style>

@@ -40,7 +40,7 @@ a {
   display: flex;
   flex-direction: column;
   background-color: white;
-  color: grey;
+  color: #595959;
 }
 
 .content {
@@ -87,6 +87,14 @@ a {
   width: 150px;
   height: 40px;
   align-self: flex-end;
+  box-shadow: 3px 3px 3px lightblue;
+}
+
+.button:hover, .button:focus {
+  background-color: #017e7e;
+  border: 1px solid #017e7e;
+  color: white;
+  box-shadow: 3px 3px 3px #02e3e3;
 }
 
 .hidden {

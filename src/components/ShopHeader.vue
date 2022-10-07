@@ -49,6 +49,12 @@ function openCart() {
 
 .img-button {
   background-color: darkblue;
-  border: none;
+  box-shadow: 3px 3px 3px lightblue;
+  border: 1px solid black;
+}
+
+.img-button:hover, .img-button:focus {
+  background-color: #017e7e;
+  border: 1px solid #017e7e;
 }
 </style>

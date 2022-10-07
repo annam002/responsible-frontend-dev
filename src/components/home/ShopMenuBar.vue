@@ -65,5 +65,6 @@ function nextTab(index: number) {
   border: 1px solid lightgrey;
   border-bottom: none;
   background-color: lightgrey;
+  color: #595959;
 }
 </style>

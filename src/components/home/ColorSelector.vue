@@ -2,7 +2,6 @@
   <div class="flex flex-wrap">
     <button v-for="color in colors" v-bind:key="color"
          class="filter-item"
-         :class="{'selected-item': selectedColor === color.color}"
          @click="selectColor(color.color)"
     >
       <img :src="getColorImage(color)"/>
@@ -36,13 +35,20 @@ function getColorImage({img, color} : { img: string, color: Color }) {
 
 <style scoped>
 .filter-item {
-  width: 37px;
-  height: 37px;
+  width: 41px;
+  height: 41px;
   margin: 2px;
   border: 1px solid grey;
   text-align: center;
   cursor: pointer;
-  padding: 0;
+  padding: 2px;
+}
+
+.filter-item:hover, .filter-item:focus {
+  background-color: #017e7e;
+  color: white;
+  padding: 1px;
+  border: 1px solid #017e7e;
 }
 
 </style>
