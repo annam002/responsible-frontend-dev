@@ -1,12 +1,12 @@
 <template>
 <div v-if="currentSockList.length > 0" class="socklist-box">
-  <div v-for="sock in currentSockList" v-bind:key="sock.id" class="sock-info">
+  <div v-for="(sock, index) in currentSockList" v-bind:key="sock.id" class="sock-info">
     <div class="small-gap"><img class="sock-img" alt="" :src="'./src/assets/socks/' + sock.imageId + '.png'" width="100" height="100"/></div>
     <div class="flex-column whole-width">
       <div class="sock-name">{{ sock.name }}</div>
       <div>{{ sock.description }}</div>
       <div>{{ sock.price }}€</div>
-      <button class="button" @click="() => addToCart(sock)" :aria-label="'Add to Cart: ' + sock.name">Add to Cart</button>
+      <button :id="'sock' + index" class="button" @click="() => addToCart(sock)" :aria-label="'Add to Cart: ' + sock.name">Add to Cart</button>
     </div>
   </div>
   <dialog ref="confirmDialog" class="info-box" :class="{ hidden: addedInfoHidden }">

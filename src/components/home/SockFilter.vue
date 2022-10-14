@@ -1,5 +1,6 @@
 <template>
 <div class="filter-box">
+  <button v-if="socklistVisible" id="skipButton" class="button" @click="focusSockList">Skip Filter</button>
   <div class="filter-heading">Filter</div>
   <div class="filter-category">Size</div>
   <div class="filter-selector"><size-selector></size-selector></div>
@@ -14,6 +15,16 @@
 import SizeSelector from "@/components/home/SizeSelector.vue";
 import ColorSelector from "@/components/home/ColorSelector.vue";
 import PriceSelector from "@/components/home/PriceSelector.vue";
+import {computed} from "vue";
+import {useSockShopStore} from "@/stores/sockShop";
+
+const store = useSockShopStore();
+
+const socklistVisible = computed(() => { return store.currentSockList.length > 0 });
+
+function focusSockList() {
+  document.getElementById("sock0")?.focus();
+}
 </script>
 
 <style scoped>
@@ -42,5 +53,22 @@ import PriceSelector from "@/components/home/PriceSelector.vue";
   display: flex;
   justify-content: center;
   padding: 0 1rem;
+}
+
+#skipButton {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+#skipButton:focus {
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
 }
 </style>

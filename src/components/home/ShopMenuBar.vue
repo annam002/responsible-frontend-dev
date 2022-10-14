@@ -32,7 +32,9 @@ const tabRefs = {};
 const selectedCategory = computed(() => { return store.sockFilter.category });
 
 function selectCategory(category: Category) {
-  store.selectCategory(category);
+  if (selectedCategory.value !== category) {
+    store.selectCategory(category);
+  }
 }
 
 function previousTab(index: number) {
