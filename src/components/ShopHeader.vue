@@ -1,7 +1,10 @@
 <template>
 <div class="header">
   <h1 class="heading clicky" @click="openHome">The Sock-Shop</h1>
-  <button class="img-button" @click="openCart"><img src="./../assets/cart.png"/><span class="num-items">{{ numItems }}</span></button>
+  <button class="img-button" @click="openCart">
+    <img alt="Cart" src="./../assets/cart.png"/>
+    <span class="num-items">{{ numItems }}</span>
+  </button>
 </div>
 </template>
 

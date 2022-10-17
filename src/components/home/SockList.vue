@@ -1,7 +1,7 @@
 <template>
 <div v-if="currentSockList.length > 0" class="socklist-box">
   <div v-for="sock in currentSockList" v-bind:key="sock.id" class="sock-info">
-    <div class="small-gap"><img class="sock-img" :src="'./src/assets/socks/' + sock.imageId + '.png'" width="100" height="100"/></div>
+    <div class="small-gap"><img class="sock-img" alt="" :src="'./src/assets/socks/' + sock.imageId + '.png'" width="100" height="100"/></div>
     <div class="flex-column whole-width">
       <div class="sock-name">{{ sock.name }}</div>
       <div>{{ sock.description }}</div>

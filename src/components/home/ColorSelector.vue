@@ -4,7 +4,7 @@
          class="filter-item"
          @click="selectColor(color.color)"
     >
-      <img :src="getColorImage(color)"/>
+      <img :src="getColorImage(color)" :alt="color.alt"/>
     </button>
   </div>
 </template>
@@ -14,8 +14,12 @@ import {useSockShopStore} from "@/stores/sockShop";
 import {computed} from "vue";
 import {Color} from "@/db/socks";
 
-const colors = [ { img: "all", color: Color.ALL}, { img: "black", color: Color.BLACK },
-  { img: "red", color: Color.RED }, { img: "green", color: Color.GREEN }, { img: "pink", color: Color.PINK } ];
+const colors = [
+  { img: "all", color: Color.ALL, alt: "All colours" },
+  { img: "black", color: Color.BLACK, alt: "Black" },
+  { img: "red", color: Color.RED, alt: "Red" },
+  { img: "green", color: Color.GREEN, alt: "Green" },
+  { img: "pink", color: Color.PINK, alt: "Pink" } ];
 
 const store = useSockShopStore();
 
