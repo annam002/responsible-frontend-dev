@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-wrap">
-    <button v-for="color in colors" v-bind:key="color"
+    <button v-for="color in colors" v-bind:key="color" :aria-label="'Select color ' + color.alt"
          class="filter-item"
          @click="selectColor(color.color)"
     >
-      <img :src="getColorImage(color)" :alt="color.alt"/>
+      <img :src="getColorImage(color)" alt/>
     </button>
   </div>
 </template>

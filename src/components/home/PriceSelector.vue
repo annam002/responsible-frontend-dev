@@ -1,6 +1,6 @@
 <template>
 <div>
-  <input type="number" v-model="price" @input="updatePrice">
+  <input type="number" v-model="price" @input="updatePrice" aria-label="Maximum price">
 </div>
 </template>
 

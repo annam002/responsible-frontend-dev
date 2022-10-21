@@ -6,7 +6,7 @@
       <div class="sock-name">{{ sock.name }}</div>
       <div>{{ sock.description }}</div>
       <div>{{ sock.price }}€</div>
-      <button class="button" @click="() => addToCart(sock)">Add to Cart</button>
+      <button class="button" @click="() => addToCart(sock)" :aria-label="'Add to Cart: ' + sock.name">Add to Cart</button>
     </div>
   </div>
   <dialog ref="confirmDialog" class="info-box" :class="{ hidden: addedInfoHidden }">

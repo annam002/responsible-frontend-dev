@@ -4,6 +4,7 @@
        class="filter-item"
        :class="{'selected-item': selectedSize === size}"
        @click="selectSize(size)"
+          :aria-label="'Select size ' + size"
   >
     {{ size }}
     </button>
