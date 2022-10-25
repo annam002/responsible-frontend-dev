@@ -1,7 +1,7 @@
 <template>
 <div class="main">
-  <div class="subheading">Warenkorb</div>
-  <div>Inhalt: <span>{{ numItems }}</span></div>
+  <div class="subheading">Cart</div>
+  <div>Content: <span>{{ numItems }}</span></div>
 </div>
 </template>
 

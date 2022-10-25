@@ -6,7 +6,7 @@
       <div class="sock-name">{{ sock.name }}</div>
       <div>{{ sock.description }}</div>
       <div>{{ sock.price }}€</div>
-      <div class="button add-to-cart" @click="() => addToCart(sock)">In den Warenkorb</div>
+      <div class="button add-to-cart" @click="() => addToCart(sock)">Add to Cart</div>
     </div>
   </div>
   <div :class="{ hidden: addedInfoHidden }" class="info-box">
